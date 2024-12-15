@@ -220,3 +220,6 @@ SELECT
   end_season
 FROM
   new_records;
+-- Note this query has a sequential problem introduced because we depend on last year data to update this year data --
+-- Making it harder to backfill data, but it is a good example of how to update SCD tables incrementally --
+-- With less data processed than the full table, and with a more complex logic than a simple update statement --
